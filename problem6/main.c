@@ -15,7 +15,8 @@ void add(node **head, int data){
     if(*head == NULL){
         new_node->both = (uintptr_t)NULL ^ (uintptr_t)NULL;
         *head = new_node;
-    }else{
+    }
+		else{
 				uintptr_t iter = (uintptr_t)NULL, pre = (uintptr_t)NULL;
 				node *temp = *head;
 				while(temp){
