@@ -13,7 +13,7 @@ void add(node **head, int data){
 	node *new_node = (node*)malloc(sizeof(node));
 	new_node->data = data;
     if(*head == NULL){
-        new_node->both = (uintptr_t)NULL ^ (uintptr_t)NULL;
+				new_node->both = (uintptr_t)NULL ^ (uintptr_t)NULL;
         *head = new_node;
     }
 		else{
@@ -28,8 +28,8 @@ void add(node **head, int data){
 				temp = (void *)pre;
 				uintptr_t swap = (uintptr_t)temp->both ^ (uintptr_t)NULL;
 				temp->both = (uintptr_t)swap ^ (uintptr_t)new_node;
-        new_node->both = (uintptr_t)NULL ^ (uintptr_t)temp;
-    }
+				new_node->both = (uintptr_t)NULL ^ (uintptr_t)temp;
+			}
 }
 
 void printList(node *head){
